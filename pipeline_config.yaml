@@ -1,0 +1,65 @@
+tickers:
+  - VFIAX    # Vanguard 500 Index Adm - 27.28%
+  - VTMGX    # Vanguard Developed Markets - 20.79%
+  - VSIGX    # Vanguard Intmdt-Term Treasury - 14.68%
+  - VEMAX    # Vanguard EM Markets - 10.16%
+  - VSMAX    # Vanguard Small Cap - 8.98%
+  - VIMAX    # Vanguard Mid Cap - 7.94%
+  - VGSLX    # Vanguard Real Estate - 5.12%
+  - VAIPX    # Vanguard Inf-Protected - 5.01%
+  - CBOIX    # Columbia Corp Income - 30.01%
+  - VGHCX    # Vanguard Health Care - 0.03%
+
+holdings:
+  VFIAX:
+    name: Vanguard 500 Index Adm
+    value_usd: 12913.56
+    allocation_pct: 27.28
+  VTMGX:
+    name: Vanguard Developed Markets Adm
+    value_usd: 9841.11
+    allocation_pct: 20.79
+  VEMAX:
+    name: Vanguard EM Markets St Idx Adm
+    value_usd: 4808.34
+    allocation_pct: 10.16
+  VSIGX:
+    name: Vanguard Intmdt-Term Treasury Idx
+    value_usd: 6947.73
+    allocation_pct: 14.68
+  VSMAX:
+    name: Vanguard Small Cap Index Adm
+    value_usd: 4252.52
+    allocation_pct: 8.98
+  VIMAX:
+    name: Vanguard Mid Cap Index Adm
+    value_usd: 3759.73
+    allocation_pct: 7.94
+  VGSLX:
+    name: Vanguard Real Estate Ind
+    value_usd: 2423.90
+    allocation_pct: 5.12
+  VAIPX:
+    name: Vanguard Inf-Protected Sec Adm
+    value_usd: 2371.14
+    allocation_pct: 5.01
+  CBOIX:
+    name: Columbia Corp Income Inst
+    value_usd: 4.57
+    allocation_pct: 30.01
+  VGHCX:
+    name: Vanguard Health Care Ind
+    value_usd: 12.69
+    allocation_pct: 0.03
+  
+paths:
+  bronze: data/bronze
+  silver: data/silver
+  gold: data/gold
+
+source:
+  name: yfinance
+  interval: 1d
+
+pipeline:
+  start_date: "2025-03-09"

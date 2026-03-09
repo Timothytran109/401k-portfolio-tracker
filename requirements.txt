@@ -1,0 +1,8 @@
+yfinance
+duckdb
+pandas
+pyarrow
+streamlit
+apache-airflow
+pyyaml
+pytest
