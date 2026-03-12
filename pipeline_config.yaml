@@ -9,49 +9,65 @@ tickers:
   - VAIPX    # Vanguard Inf-Protected - 5.01%
   - CBOIX    # Columbia Corp Income - 30.01%
   - VGHCX    # Vanguard Health Care - 0.03%
+  - NVDA     # NVIDIA Corporation - 10.00%
 
 holdings:
   VFIAX:
     name: Vanguard 500 Index Adm
     value_usd: 12913.56
     allocation_pct: 27.28
+    type: mutual_fund
   VTMGX:
     name: Vanguard Developed Markets Adm
     value_usd: 9841.11
     allocation_pct: 20.79
+    type: mutual_fund
   VEMAX:
     name: Vanguard EM Markets St Idx Adm
     value_usd: 4808.34
     allocation_pct: 10.16
+    type: mutual_fund
   VSIGX:
     name: Vanguard Intmdt-Term Treasury Idx
     value_usd: 6947.73
     allocation_pct: 14.68
+    type: mutual_fund
   VSMAX:
     name: Vanguard Small Cap Index Adm
     value_usd: 4252.52
     allocation_pct: 8.98
+    type: mutual_fund
   VIMAX:
     name: Vanguard Mid Cap Index Adm
     value_usd: 3759.73
     allocation_pct: 7.94
+    type: mutual_fund
   VGSLX:
     name: Vanguard Real Estate Ind
     value_usd: 2423.90
     allocation_pct: 5.12
+    type: mutual_fund
   VAIPX:
     name: Vanguard Inf-Protected Sec Adm
     value_usd: 2371.14
-    allocation_pct: 5.01
+    allocation_pct: 2.01
+    type: mutual_fund
   CBOIX:
     name: Columbia Corp Income Inst
     value_usd: 4.57
     allocation_pct: 30.01
+    type: mutual_fund
   VGHCX:
     name: Vanguard Health Care Ind
     value_usd: 12.69
     allocation_pct: 0.03
-  
+    type: mutual_fund
+  NVDA:
+    name: NVIDIA Corporation
+    value_usd: 500
+    allocation_pct: 3.00
+    type: stock
+
 paths:
   bronze: data/bronze
   silver: data/silver
