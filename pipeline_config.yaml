@@ -15,55 +15,55 @@ holdings:
   VFIAX:
     name: Vanguard 500 Index Adm
     value_usd: 12913.56
-    allocation_pct: 27.28
+    allocation_pct: 26.99
     type: mutual_fund
     sector: Large Cap Blend
   VTMGX:
     name: Vanguard Developed Markets Adm
     value_usd: 9841.11
-    allocation_pct: 20.79
+    allocation_pct: 20.57
     type: mutual_fund
     sector: International Developed
   VSIGX:
     name: Vanguard Intmdt-Term Treasury Idx
     value_usd: 6947.73
-    allocation_pct: 14.68
+    allocation_pct: 14.52
     type: mutual_fund
     sector: Fixed Income
   VEMAX:
     name: Vanguard EM Markets St Idx Adm
     value_usd: 4808.34
-    allocation_pct: 10.16
+    allocation_pct: 10.05
     type: mutual_fund
     sector: Emerging Markets
   VSMAX:
     name: Vanguard Small Cap Index Adm
     value_usd: 4252.52
-    allocation_pct: 8.98
+    allocation_pct: 8.89
     type: mutual_fund
     sector: Small Cap Blend
   VIMAX:
     name: Vanguard Mid Cap Index Adm
     value_usd: 3759.73
-    allocation_pct: 7.94
+    allocation_pct: 7.86
     type: mutual_fund
     sector: Mid Cap Blend
   VGSLX:
     name: Vanguard Real Estate Ind
     value_usd: 2423.90
-    allocation_pct: 5.12
+    allocation_pct: 5.07
     type: mutual_fund
     sector: Real Estate
   VAIPX:
     name: Vanguard Inf-Protected Sec Adm
     value_usd: 2371.14
-    allocation_pct: 2.01
+    allocation_pct: 4.96
     type: mutual_fund
     sector: Inflation Protected Bond
   CBOIX:
     name: Columbia Corp Income Inst
     value_usd: 4.57
-    allocation_pct: 30.01
+    allocation_pct: 0.01
     type: mutual_fund
     sector: Corporate Bond
   VGHCX:
@@ -75,7 +75,7 @@ holdings:
   NVDA:
     name: NVIDIA Corporation
     value_usd: 500.00
-    allocation_pct: 3.00
+    allocation_pct: 1.05
     type: stock
     sector: Technology
 
