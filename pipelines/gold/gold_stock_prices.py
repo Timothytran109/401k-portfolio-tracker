@@ -2,6 +2,7 @@ import duckdb
 import pandas as pd
 import yaml
 import os
+import holidays as market_holidays
 from datetime import datetime, date
 
 def load_config() -> dict:
@@ -31,9 +32,9 @@ def build_dim_date(start_date: str, end_date: str) -> pd.DataFrame:
     df["day_of_week"] = df["full_date"].dt.strftime("%A")   # e.g. "Monday"
     df["is_weekend"]  = df["full_date"].dt.dayofweek >= 5   # 5=Saturday, 6=Sunday
 
-    # We're not tracking specific market holidays for simplicity
-    # In a production system you'd cross-reference a holiday calendar API
-    df["is_market_holiday"] = False
+    # Holiday tracking
+    us_holidays = market_holidays.NYSE(years=date_range.year.unique().tolist())
+    df["is_market_holiday"] = df["full_date"].apply(lambda d: d in us_holidays)
 
     # Convert full_date from Timestamp to plain date for consistency
     df["full_date"] = df["full_date"].dt.date
@@ -201,8 +202,8 @@ def build_dim_stock_scd2(config: dict, db_path: str) -> pd.DataFrame:
 
     # Ensure correct column types for DuckDB
     dim_stock["stock_key"]  = dim_stock["stock_key"].astype(int)
-    dim_stock["valid_from"] = pd.to_datetime(dim_stock["valid_from"]).dt.date
-    dim_stock["valid_to"]   = pd.to_datetime(dim_stock["valid_to"]).dt.date
+    dim_stock["valid_from"] = dim_stock["valid_from"].apply(lambda x: x if isinstance(x, date) else pd.to_datetime(x).date())
+    dim_stock["valid_to"]   = dim_stock["valid_to"].apply(lambda x: x if isinstance(x, date) else pd.to_datetime(x).date())
     dim_stock["is_current"] = dim_stock["is_current"].astype(bool)
 
     current_count = dim_stock["is_current"].sum()
