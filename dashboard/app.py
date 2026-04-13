@@ -162,9 +162,8 @@ TICKER_COLORS = [
 # ══════════════════════════════════════════════════════════════════════════════
 DB_PATH = Path(__file__).parent.parent / "data" / "gold" / "portfolio.duckdb"
 
-@st.cache_resource
 def get_conn():
-    """Open a read-only connection to the Gold DuckDB file."""
+    """Open a fresh connection to the Gold DuckDB file each time."""
     if not DB_PATH.exists():
         return None
     return duckdb.connect(str(DB_PATH), read_only=True)
