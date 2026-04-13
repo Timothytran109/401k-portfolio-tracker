@@ -1,8 +1,16 @@
-yfinance
-duckdb
-pandas
-pyarrow
-streamlit
-apache-airflow
-pyyaml
-pytest
+# Core pipeline
+yfinance==1.2.0
+pandas==2.3.3
+pyarrow==23.0.1
+duckdb==1.4.4
+PyYAML==6.0.3
+
+# Dashboard
+streamlit==1.55.0
+plotly==6.6.0
+
+# Orchestration
+apache-airflow==3.1.7
+
+# Testing
+pytest==9.0.2
