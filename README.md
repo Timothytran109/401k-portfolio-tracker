@@ -8,7 +8,7 @@ An end-to-end ELT pipeline that extracts daily stock and mutual fund prices from
 
 ## Overview
 
-This project tracks a real 401k portfolio made up of 10 Vanguard mutual funds and 1 stock (NVDA). It was built to demonstrate a production-style data engineering workflow on a personal dataset — from raw extraction through dimensional modeling to a live dashboard.
+This project tracks a real 401k portfolio made up of 9 Vanguard mutual funds, 1 Columbia mutual fund, and 1 stock (NVDA). It was built to demonstrate a production-style data engineering workflow on a personal dataset — from raw extraction through dimensional modeling to a live dashboard.
 
 The pipeline runs daily and the dashboard reads directly from a DuckDB Gold layer, making the full data flow visible end-to-end.
 
@@ -171,7 +171,7 @@ This preserves the dollar magnitude of each holding while tracking its price-dri
 **1. Clone the repo and create a virtual environment**
 
 ```bash
-git clone https://github.com/yourusername/401k-portfolio-tracker.git
+git clone https://github.com/Timothytran109/401k-portfolio-tracker.git
 cd 401k-portfolio-tracker
 python -m venv venv
 
